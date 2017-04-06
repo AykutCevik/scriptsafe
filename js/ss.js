@@ -4,7 +4,9 @@
 var savedBeforeloadEvents = new Array();
 var timer;
 var iframe = 0;
+var clipboard = false;
 var timestamp = Math.round(new Date().getTime()/1000.0);
+var linktrgt;
 // initialize settings object with default settings (that are overwritten by the actual user-set values later on)
 var SETTINGS = {
 	"MODE": "block",
@@ -33,6 +35,8 @@ var SETTINGS = {
 	"KEYBOARD": "false",
 	"WEBRTCDEVICE": "false",
 	"GAMEPAD": "false",
+	"WEBVR": "false",
+	"BLUETOOTH": "false",
 	"TIMEZONE": "false",
 	"ANNOYANCES": "false",
 	"ANNOYANCESMODE": "relaxed",
@@ -45,6 +49,8 @@ var SETTINGS = {
 	"REFERRERSPOOFDENYWHITELISTED": "true",
 	"PARANOIA": "true",
 	"CLIPBOARD": "false",
+	"DATAURL": "true",
+	"KEYDELTA": 0,
 };
 document.addEventListener("beforeload", saveBeforeloadEvent, true); // eventually remove
 if (window.self != window.top) iframe = 1;
@@ -83,6 +89,8 @@ chrome.extension.sendRequest({reqtype: "get-settings", iframe: iframe}, function
 		SETTINGS['WEBGL'] = response.webgl;
 		SETTINGS['WEBRTCDEVICE'] = response.webrtcdevice;
 		SETTINGS['GAMEPAD'] = response.gamepad;
+		SETTINGS['WEBVR'] = response.webvr;
+		SETTINGS['BLUETOOTH'] = response.bluetooth;
 		SETTINGS['TIMEZONE'] = response.timezone;
 		SETTINGS['CLIPBOARD'] = response.clipboard;
 		if (SETTINGS['CANVAS'] != 'false' && response.fp_canvas != '-1') SETTINGS['CANVAS'] = 'false';
@@ -92,17 +100,23 @@ chrome.extension.sendRequest({reqtype: "get-settings", iframe: iframe}, function
 		if (SETTINGS['BATTERY'] == 'true' && response.fp_battery != '-1') SETTINGS['BATTERY'] = 'false';
 		if (SETTINGS['WEBRTCDEVICE'] == 'true' && response.fp_device != '-1') SETTINGS['WEBRTCDEVICE'] = 'false';
 		if (SETTINGS['GAMEPAD'] == 'true' && response.fp_gamepad != '-1') SETTINGS['GAMEPAD'] = 'false';
+		if (SETTINGS['WEBVR'] == 'true' && response.fp_webvr != '-1') SETTINGS['WEBVR'] = 'false';
+		if (SETTINGS['BLUETOOTH'] == 'true' && response.fp_bluetooth != '-1') SETTINGS['BLUETOOTH'] = 'false';
 		if (SETTINGS['CLIENTRECTS'] == 'true' && response.fp_clientrectangles != '-1') SETTINGS['CLIENTRECTS'] = 'false';
 		if (SETTINGS['CLIPBOARD'] == 'true' && response.fp_clipboard != '-1') SETTINGS['CLIPBOARD'] = 'false';
-		if (SETTINGS['CANVAS'] != 'false' || SETTINGS['CANVASFONT'] == 'true' || SETTINGS['CLIENTRECTS'] == 'true' || SETTINGS['AUDIOBLOCK'] == 'true' || SETTINGS['BATTERY'] == 'true' || SETTINGS['WEBGL'] == 'true' || SETTINGS['WEBRTCDEVICE'] == 'true' || SETTINGS['GAMEPAD'] == 'true' || SETTINGS['TIMEZONE'] != 'false' || SETTINGS['CLIPBOARD'] == 'true') {
+		if (SETTINGS['CANVAS'] != 'false' || SETTINGS['CANVASFONT'] == 'true' || SETTINGS['CLIENTRECTS'] == 'true' || SETTINGS['AUDIOBLOCK'] == 'true' || SETTINGS['BATTERY'] == 'true' || SETTINGS['WEBGL'] == 'true' || SETTINGS['WEBRTCDEVICE'] == 'true' || SETTINGS['GAMEPAD'] == 'true' || SETTINGS['WEBVR'] == 'true' || SETTINGS['BLUETOOTH'] == 'true' || SETTINGS['TIMEZONE'] != 'false' || SETTINGS['CLIPBOARD'] == 'true') {
 			fingerprintProtection();
 		}
 		SETTINGS['WEBBUGS'] = response.webbugs;
 		SETTINGS['LINKTARGET'] = response.linktarget;
+		if (SETTINGS['LINKTARGET'] == 'same') linktrgt = '_self';
+		else if (SETTINGS['LINKTARGET'] == 'new') linktrgt = '_blank';
 		SETTINGS['REFERRER'] = response.referrer;
 		SETTINGS['REFERRERSPOOFDENYWHITELISTED'] = response.referrerspoofdenywhitelisted;
 		SETTINGS['PARANOIA'] = response.paranoia;
+		SETTINGS['DATAURL'] = response.dataurl;
 		SETTINGS['KEYBOARD'] = response.keyboard;
+		SETTINGS['KEYDELTA'] = parseInt(response.keydelta);
 		$(document).ready(function() {
 			loaded();
 			if (SETTINGS['KEYBOARD'] == 'true') {
@@ -121,7 +135,7 @@ chrome.extension.sendRequest({reqtype: "get-settings", iframe: iframe}, function
 	delete savedBeforeloadEvents; // eventually remove
 });
 function fingerprintProtection() {
-	injectAnon(function(canvas, canvasfont, audioblock, battery, webgl, webrtcdevice, gamepad, timezone, clientrects, clipboard){
+	injectAnon(function(canvas, canvasfont, audioblock, battery, webgl, webrtcdevice, gamepad, webvr, bluetooth, timezone, clientrects, clipboard){
 		function processFunctions(scope) {
 			/* Canvas */
 			if (canvas != 'false') {
@@ -274,31 +288,15 @@ function fingerprintProtection() {
 			if (webgl == 'true') {
 				var webgl_triggerblock = scope.document.createElement('div');
 				webgl_triggerblock.className = 'scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_webgl';
-				var webgl_a = scope.WebGLRenderingContext;
-				webgl_a.getSupportedExtensions = function() {
-					webgl_triggerblock.title = 'getSupportedExtensions';
-					document.documentElement.appendChild(webgl_triggerblock);
-					return false;
-				}
-				webgl_a.getParameter = function() {
-					webgl_triggerblock.title = 'getParameter';
-					document.documentElement.appendChild(webgl_triggerblock);
-					return false;
-				}
-				webgl_a.getContextAttributes = function() {
-					webgl_triggerblock.title = 'getContextAttributes';
-					document.documentElement.appendChild(webgl_triggerblock);
-					return false;
-				}
-				webgl_a.getShaderPrecisionFormat = function() {
-					webgl_triggerblock.title = 'getShaderPrecisionFormat';
-					document.documentElement.appendChild(webgl_triggerblock);
-					return false;
-				}
-				webgl_a.getExtension = function() {
-					webgl_triggerblock.title = 'getExtension';
-					document.documentElement.appendChild(webgl_triggerblock);
-					return false;
+				var webgl_a = scope.HTMLCanvasElement;
+				var origGetContext = webgl_a.prototype.getContext;
+				webgl_a.prototype.getContext = function(arg) {
+					if (arg.match(/webgl/i)) {
+						webgl_triggerblock.title = 'getContext';
+						document.documentElement.appendChild(webgl_triggerblock);
+						return false;
+					}
+					return origGetContext.apply(this, arguments);
 				}
 			}
 			/* WebRTC */
@@ -332,6 +330,30 @@ function fingerprintProtection() {
 					gamepad_triggerblock.title = 'getGamepads';
 					document.documentElement.appendChild(gamepad_triggerblock);
 					return false;
+				}
+			}
+			/* WebVR */
+			if (webvr == 'true') {
+				var webvr_triggerblock = scope.document.createElement('div');
+				webvr_triggerblock.className = 'scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_webvr';
+				var webvr_a = scope.navigator;
+				webvr_a.getVRDisplays = function() {
+					webvr_triggerblock.title = 'getVRDisplays';
+					document.documentElement.appendChild(webvr_triggerblock);
+					return false;
+				}
+			}
+			/* Bluetooth */
+			if (bluetooth == 'true') {
+				if (scope.navigator.bluetooth) {
+					var bluetooth_triggerblock = scope.document.createElement('div');
+					bluetooth_triggerblock.className = 'scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_bluetooth';
+					var bluetooth_a = scope.navigator.bluetooth;
+					bluetooth_a.requestDevice = function() {
+						bluetooth_triggerblock.title = 'requestDevice';
+						document.documentElement.appendChild(bluetooth_triggerblock);
+						return false;
+					}
 				}
 			}
 			/* Client Rectangles */
@@ -392,34 +414,36 @@ function fingerprintProtection() {
 				}
 			}
 		});
-	}, "'"+SETTINGS['CANVAS']+"','"+SETTINGS['CANVASFONT']+"','"+SETTINGS['AUDIOBLOCK']+"','"+SETTINGS['BATTERY']+"','"+SETTINGS['WEBGL']+"','"+SETTINGS['WEBRTCDEVICE']+"','"+SETTINGS['GAMEPAD']+"','"+SETTINGS['TIMEZONE']+"','"+SETTINGS['CLIENTRECTS']+"','"+SETTINGS['CLIPBOARD']+"'");
+	}, "'"+SETTINGS['CANVAS']+"','"+SETTINGS['CANVASFONT']+"','"+SETTINGS['AUDIOBLOCK']+"','"+SETTINGS['BATTERY']+"','"+SETTINGS['WEBGL']+"','"+SETTINGS['WEBRTCDEVICE']+"','"+SETTINGS['GAMEPAD']+"','"+SETTINGS['WEBVR']+"','"+SETTINGS['BLUETOOTH']+"','"+SETTINGS['TIMEZONE']+"','"+SETTINGS['CLIENTRECTS']+"','"+SETTINGS['CLIPBOARD']+"'");
 }
 function clipboardProtect(el) {
-    el.oncontextmenu = null;
-    el.onselectstart = null;
-    el.onmousedown = null;
-    el.oncopy = null;
-    el.oncut = null;
-    el.onpaste = null;
-	el.addEventListener('contextmenu', function(e) { e.returnValue = true; });
-	el.addEventListener('selectstart', function(e) { e.returnValue = true; });
-	el.addEventListener('mousedown', function(e) { e.returnValue = true; });
-	el.addEventListener('copy', function(e) { e.returnValue = true; });
-	el.addEventListener('cut', function(e) { e.returnValue = true; });
+    var arr = ['copy', 'cut', 'paste', 'selectstart', 'contextmenu', 'mousedown', 'mouseup'];
+    for (var i = 0; i < arr.length; i++) {
+        if (el['on' + arr[i]]) el['on' + arr[i]] = null;
+        el.addEventListener(arr[i], function(e){ if (!clipboard) { clipboard = true; chrome.extension.sendRequest({reqtype: "update-blocked", src: window.location.href+" ("+e.type+"())", node: 'Clipboard Interference'}); } e.stopPropagation(); }, true);
+    };
 }
 function loaded() {
 	ScriptSafe();
 	new MutationObserver(ScriptSafe).observe(document.querySelector("body"), { childList: true, subtree : true, attributes: false, characterData : false });
 }
 function ScriptSafe() {
-	if (SETTINGS['LINKTARGET'] != 'off') {
-		var linktrgt;
-		if (SETTINGS['LINKTARGET'] == 'same') linktrgt = '_self';
-		else if (SETTINGS['LINKTARGET'] == 'new') linktrgt = '_blank';
-		$("a[target!='"+linktrgt+"']").attr("target", linktrgt);
-	}
-	if (SETTINGS['REFERRER'] == 'alldomains' || (SETTINGS['REFERRER'] == 'true' && (SETTINGS['DOMAINSTATUS'] != '0' || SETTINGS['REFERRERSPOOFDENYWHITELISTED'] == 'true'))) {
-		$("a[data-ss"+timestamp+"!='1']").each(function() { var elSrc = getElSrc(this); if (thirdParty(elSrc)) { $(this).attr("rel","noreferrer"); } $(this).attr("data-ss"+timestamp,'1'); });
+	if (SETTINGS['LINKTARGET'] != 'off' || SETTINGS['DATAURL'] == 'true' || SETTINGS['REFERRER'] == 'alldomains' || (SETTINGS['REFERRER'] == 'true' && (SETTINGS['DOMAINSTATUS'] != '0' || SETTINGS['REFERRERSPOOFDENYWHITELISTED'] == 'true'))) {
+		$("a[data-ss"+timestamp+"!='1']").each(function() {
+			var elSrc = getElSrc(this);
+			var attr = {};		
+			if ((SETTINGS['REFERRER'] == 'alldomains' || (SETTINGS['REFERRER'] == 'true' && (SETTINGS['DOMAINSTATUS'] != '0' || SETTINGS['REFERRERSPOOFDENYWHITELISTED'] == 'true'))) && thirdParty(elSrc)) attr['rel'] = 'noreferrer';
+			if (SETTINGS['LINKTARGET'] != 'off') {
+				if ($(this).attr('target') != linktrgt) attr['target'] = linktrgt;
+			}
+			if (SETTINGS['DATAURL'] == 'true' && elSrc.match(/^\s*data:text\//i)) {
+				chrome.extension.sendRequest({reqtype: "update-blocked", src: $(this).attr('href'), node: 'Data URL'});
+				attr['target'] = '';
+				attr['href'] = 'data:text/html,<h1>This data:text/html link has been sanitized by ScriptSafe.</h1><p>Original link:<br><strong>'+$(this).attr('href').replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/^\s*data:text/i, "data-SCRIPTSAFE:text")+'</strong></p><p>If you would like to still load it (not recommended), copy and paste the above string into your address bar and remove "-SCRIPTSAFE" which is inserted as a safeguard.</p><p><a href="javascript:history.go(-1);">Go Back</a></p>';
+			}
+			attr['data-ss'+timestamp] = '1';
+			$(this).attr(attr);
+		});
 	}
 	if (SETTINGS['CANVAS'] != 'false') {
 		$("canvas.scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_canvas").each(function() { chrome.extension.sendRequest({reqtype: "update-blocked", src: window.location.href+" ("+$(this).attr('title')+"())", node: 'Canvas Fingerprint'}); $(this).remove(); });
@@ -444,6 +468,12 @@ function ScriptSafe() {
 	}
 	if (SETTINGS['GAMEPAD'] == 'true') {
 		$("div.scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_gamepad").each(function() { chrome.extension.sendRequest({reqtype: "update-blocked", src: window.location.href+" ("+$(this).attr('title')+"())", node: 'Gamepad Enumeration'}); $(this).remove(); });
+	}
+	if (SETTINGS['WEBVR'] == 'true') {
+		$("div.scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_webvr").each(function() { chrome.extension.sendRequest({reqtype: "update-blocked", src: window.location.href+" ("+$(this).attr('title')+"())", node: 'WebVR Enumeration'}); $(this).remove(); });
+	}
+	if (SETTINGS['BLUETOOTH'] == 'true') {
+		$("div.scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_bluetooth").each(function() { chrome.extension.sendRequest({reqtype: "update-blocked", src: window.location.href+" ("+$(this).attr('title')+"())", node: 'Bluetooth Enumeration'}); $(this).remove(); });
 	}
 	if (SETTINGS['CLIENTRECTS'] == 'true') {
 		$("div.scriptsafe_oiigbmnaadbkfbmpbfijlflahbdbdgdf_clientrects").each(function() { chrome.extension.sendRequest({reqtype: "update-blocked", src: window.location.href+" ("+$(this).attr('title')+"())", node: 'Client Rectangles'}); $(this).remove(); });
@@ -631,7 +661,7 @@ function getElSrc(el) {
 	}
 }
 function randomDelay() {
-	var zzz = (Date.now() + (Math.floor(Math.random() * 100) + 10));
+	var zzz = (Date.now() + (Math.floor(Math.random() * SETTINGS['KEYDELTA'])));
 	while (Date.now() < zzz) {};
 }
 function injectAnon(f, val) {
@@ -723,9 +753,10 @@ function block(event) {
 	var thirdPartyCheck;
 	var elementStatusCheck;
 	var domainCheckStatus;
-	var elWidth = $(el).attr('width');
-	var elHeight = $(el).attr('height');
-	var elStyle = $(el).attr('style');
+	var $el = $(el);
+	var elWidth = $el.attr('width');
+	var elHeight = $el.attr('height');
+	var elStyle = $el.attr('style');
 	var baddiesCheck = baddies(absoluteUrl, SETTINGS['ANNOYANCESMODE'], SETTINGS['ANTISOCIAL']);
 	if (SETTINGS['DOMAINSTATUS'] == '1' || (SETTINGS['DOMAINSTATUS'] == '-1' && SETTINGS['MODE'] == 'block' && SETTINGS['PARANOIA'] == 'true' && SETTINGS['PRESERVESAMEDOMAIN'] == 'false')) {
 		elementStatusCheck = true;

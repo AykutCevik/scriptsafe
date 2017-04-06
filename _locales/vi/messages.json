@@ -52,8 +52,8 @@
       "message": "luôn luôn xóa tiện ích xã hội / nút, ngay cả khi trong danh sách trắng"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "Để chặn toàn diện hơn, hãy kiểm tra <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>ngắt kết nối</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, và / hoặc <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock xứ</a> với tất cả các danh sách đăng ký trên <a href=https: mục tiêu //www.fanboy.co.nz/ =_blank> trang web Fanboy</a>"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "Để chặn toàn diện hơn, hãy kiểm tra <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>ngắt kết nối</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, và / hoặc <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock xứ</a> với tất cả các danh sách đăng ký trên <a href=https: mục tiêu //www.fanboy.co.nz/ =_blank> trang web Fanboy</a>"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "Chặn Tất Cả Các Phép Đối Với Phiên"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "Khối Bluetooth Enumeration:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "ngăn chặn việc có thiết bị phát hiện thông qua các API Bluetooth"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "Hủy bỏ tất cả các quyền tạm thời"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "Cấu hình các phím nóng ScriptSafe:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "Cấu hình các phím nóng ScriptSafe"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "Cài đặt nhập thành công"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "Cài đặt nhập thành công, ngoại trừ sau (giá trị sản phẩm hoặc tên không được công nhận):"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "Cài đặt nhập thành công và đồng bộ trong 30 giây"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "Cài đặt nhập thành công và đồng bộ trong 10 giây"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "Cài đặt đã lưu"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "Cài đặt lưu và đồng bộ trong 30 giây"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "Cài đặt lưu và đồng bộ trong 10 giây"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "ngăn chặn rò rỉ địa chỉ IP"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "Khối WebVR Enumeration:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "ngăn chặn việc có thiết bị phát hiện thông qua các API WebVR"
    },
    "blackbind": {
       "description": "+ Blacklist",

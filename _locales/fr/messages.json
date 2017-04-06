@@ -52,8 +52,8 @@
       "message": "toujours retirer les widgets et les boutons sociaux, même s'ils sont sur la liste blanche"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "Pour un blocage plus complet, consultez <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, et / ou <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> avec toutes les listes de souscription sur le <a href=https: target=_blank //www.fanboy.co.nz/> site de Fanboy</a>"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "Pour un blocage plus complet, consultez <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, et / ou <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> avec toutes les listes de souscription sur le <a href=https: target=_blank //www.fanboy.co.nz/> site de Fanboy</a>"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "Bloquer tous les éléments autorisés pour la session"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "Bloquer l'énumération Bluetooth:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "éviter d'avoir les périphériques détectés via l'API Bluetooth"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "Supprimer toutes les autorisations temporaires"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "Configurer les raccourcis de ScriptSafe:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "Configurer les raccourcis de ScriptSafe"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "Paramètres importés avec succès"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "Paramètres importés avec succès, à l'exception de la (valeur vide ou un nom non reconnu) suivant:"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "Paramètres importés avec succès et la synchronisation en 30 secondes"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "Paramètres importés avec succès et la synchronisation en 10 secondes"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "Paramètres sauvegardés"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "Réglages sauvegardés et synchronisation dans 30 secondes"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "Réglages sauvegardés et synchronisation dans 10 secondes"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "empêcher la fuite de l'adresse IP"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "Bloquer l'énumération WebVR:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "éviter d'avoir les périphériques détectés via l'API WebVR"
    },
    "blackbind": {
       "description": "+ Blacklist",

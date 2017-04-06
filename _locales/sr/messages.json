@@ -52,8 +52,8 @@
       "message": "Увек уклоните социјалних видгетс / дугмад, чак и ако вхителистед"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "За више свеобухватан блокирања, погледајте <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Гхостери</а>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Ацтион</а>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Зељко Јоксимовиц</а>, и / или <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>уБлоцк Порекло</а> са свим листама претплате на <a href=https://www.fanboy.co.nz/ target=_blank>Фанбои сајт</а>"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "За више свеобухватан блокирања, погледајте <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Гхостери</а>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Ацтион</а>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Зељко Јоксимовиц</а>, и / или <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>уБлоцк Порекло</а> са свим листама претплате на <a href=https://www.fanboy.co.nz/ target=_blank>Фанбои сајт</а>"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "Блокира све дозвољено за Сессион"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "Блок ВебВР Бројање:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "спречити имају уређаје откривене преко ВебВР АПИ"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "Уклоните све привремене дозволе"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "Конфигурисати СцриптСафе пречице:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "Конфигурисати СцриптСафе пречице"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "Подешавања увезена успешно"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "Подешавања успешно увезени, осим следећег (празан вредности или непризнате назив):"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "Подешавања успешно увезени и синхронизацију у 30 секунди"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "Подешавања успешно увезени и синхронизацију у 10 секунди"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "Подешавања сачуване"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "Подешавања сачуване и синхронизацију у 30 секунди"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "Подешавања сачуване и синхронизацију у 10 секунди"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "спречити ИП адреса цурење"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "Блок ВебВР Бројање:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "спречити имају уређаје откривене преко ВебВР АПИ"
    },
    "blackbind": {
       "description": "+ Blacklist",

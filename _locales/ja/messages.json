@@ -52,8 +52,8 @@
       "message": "常にホワイトリストに登録しても、SNS ウィジェット/ボタンを削除"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=\"https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij\" target=\"_blank\">Ghostery</a>, <a href=\"https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo\" target=\"_blank\">Disconnect</a>, <a href=\"https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd\" target=\"_blank\">Blur</a>, and/or <a href=\"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm\" target=\"_blank\">uBlock Origin</a> with all of the subscription lists on the <a href=\"https://www.fanboy.co.nz/\" target=_blank>Fanboy site</a>",
-      "message": "より包括的なブロッキングについては、<a href=\"https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij\" target=\"_blank\">Ghostery</a>、<a href=\"https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo\" target=\"_blank\">Disconnect</a>、<a href=\"https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd\" target=\"_blank\">Blur</a>、<a href=\"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm\" target=\"_blank\">uBlock Origin</a> および <a href=\"https://www.fanboy.co.nz/\" target=_blank>Fanboy site</a>上のサブスクリプションリストをチェックしてください"
+      "description": "For more comprehensive blocking, check out <a href=\"https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp\" target=\"_blank\">Privacy Badger</a>, <a href=\"https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo\" target=\"_blank\">Disconnect</a>, <a href=\"https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd\" target=\"_blank\">Blur</a>, and/or <a href=\"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm\" target=\"_blank\">uBlock Origin</a> with all of the subscription lists on the <a href=\"https://www.fanboy.co.nz/\" target=_blank>Fanboy site</a>",
+      "message": "より包括的なブロッキングについては、<a href=\"https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp\" target=\"_blank\">Privacy Badger</a>、<a href=\"https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo\" target=\"_blank\">Disconnect</a>、<a href=\"https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd\" target=\"_blank\">Blur</a>、<a href=\"https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm\" target=\"_blank\">uBlock Origin</a> および <a href=\"https://www.fanboy.co.nz/\" target=_blank>Fanboy site</a>上のサブスクリプションリストをチェックしてください"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "許可したすべてのセッションをブロック"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "ブロックBluetooth列挙："
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "Bluetooth APIを介して検出されたデバイスを防ぎます"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "すべての一時的な権限を削除する"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "ScriptSafeのホットキーを設定します。"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "ScriptSafeのホットキーを設定します"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "正常にインポート設定"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "以下の（空の値または認識されない名前）を除いて、正常にインポートセッティング："
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "設定が正常にインポートし、30秒で同期"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "設定が正常にインポートし、10秒で同期"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -537,7 +545,7 @@
    },
    "revoketempall": {
       "description": "Revoke All Temporary",
-      "message": "一時的な許可を取り消し"
+      "message": "一時的な許可をすべて取り消し"
    },
    "same": {
       "description": "Same Document",
@@ -572,8 +580,12 @@
       "message": "設定が保存されました"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "30秒での設定保存と同期"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "10秒での設定保存と同期"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "コンテキストメニューを表示:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "IPアドレス漏れを防止"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "ブロックWebVR列挙："
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "WebVR APIを介して検出されたデバイスを防ぎます"
    },
    "blackbind": {
       "description": "+ Blacklist",

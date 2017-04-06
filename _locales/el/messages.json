@@ -52,8 +52,8 @@
       "message": "Πάντα αφαιρέστε την κοινωνική widgets / κουμπιά, ακόμη και αν στη λίστα επιτρεπόμενων"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "Για πιο ολοκληρωμένη κλείδωμα, ελέγξτε <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Αποσύνδεση</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, και / ή <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock προέλευσης</a> με όλες τις λίστες συνδρομής για το <a href = https://www.fanboy.co.nz/ target =_blank>ιστοσελίδα Fanboy</a>"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "Για πιο ολοκληρωμένη κλείδωμα, ελέγξτε <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Αποσύνδεση</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, και / ή <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock προέλευσης</a> με όλες τις λίστες συνδρομής για το <a href = https://www.fanboy.co.nz/ target =_blank>ιστοσελίδα Fanboy</a>"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "Να δεσμεύσουν το σύνολο κατοικίδια Για Session"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "Αποκλεισμός Bluetooth Καταμέτρηση:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "αποτρέψει έχουν συσκευές ανιχνεύονται μέσω του Bluetooth API"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "Κατάργηση όλων των προσωρινών αδειών"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "Διαμορφώστε ScriptSafe hotkeys:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "Διαμορφώστε ScriptSafe hotkeys"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "Ρυθμίσεις που εισάγονται με επιτυχία"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "Ρυθμίσεις που εισάγονται με επιτυχία, εκτός από τα εξής (άδειο αξία ή μη αναγνωρισμένης όνομα):"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "Ρυθμίσεις εισαχθεί με επιτυχία και το συγχρονισμό σε 30 δευτερόλεπτα"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "Ρυθμίσεις εισαχθεί με επιτυχία και το συγχρονισμό σε 10 δευτερόλεπτα"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "Οι ρυθμίσεις αποθηκεύτηκαν"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "Ρυθμίσεις αποθηκεύονται και το συγχρονισμό σε 30 δευτερόλεπτα"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "Ρυθμίσεις αποθηκεύονται και το συγχρονισμό σε 10 δευτερόλεπτα"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "αποτρέπεται η διαρροή διεύθυνση IP"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "Αποκλεισμός WebVR Καταμέτρηση:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "αποτρέψει έχουν συσκευές ανιχνεύονται μέσω του WebVR API"
    },
    "blackbind": {
       "description": "+ Blacklist",

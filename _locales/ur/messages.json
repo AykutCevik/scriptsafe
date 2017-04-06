@@ -52,8 +52,8 @@
       "message": "ہمیشہ وائٹ لسٹ تو سماجی ویجٹ / بٹن، بھی ہٹا دیں"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "زیادہ جامع مسدود کرنے کے لئے، میں Fanboy سائٹ پر Ghostery، منقطع، کلنک، اور / یا uBlock نکالنے چیک سکریپشن فہرستوں کی سب کے ساتھ"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "زیادہ جامع مسدود کرنے کے لئے، میں Fanboy سائٹ پر Privacy Badger منقطع، کلنک، اور / یا uBlock نکالنے چیک سکریپشن فہرستوں کی سب کے ساتھ"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "تمام سیشن کے لئے اجازت BLOCK"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "بلاک Bluetooth کے شمار:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "تعلق آلات Bluetooth کے ذریعے API کے پتہ روکنے"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "تمام عارضی اجازتیں حذف کریں"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "ScriptSafe hotkeys کے کی تشکیل:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "ScriptSafe hotkeys کے کی تشکیل"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "ترتیبات کو کامیابی سے برآمد"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "ترتیبات، کامیابی سے درآمد مندرجہ ذیل (خالی قدر یا غیر تسلیم شدہ نام) سوائے:"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "ترتیبات کو کامیابی سے درآمد اور 30 ​​سیکنڈ میں موافقت پذیری"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "ترتیبات کو کامیابی سے درآمد اور 10 ​​سیکنڈ میں موافقت پذیری"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "ترتیبات محفوظ"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "ترتیبات کو بچا لیا اور 30 ​​سیکنڈ میں موافقت پذیری"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "ترتیبات کو بچا لیا اور 10 ​​سیکنڈ میں موافقت پذیری"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "IP ایڈریس کی لیکیج کو روکنے کے"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "بلاک WebVR کے شمار:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "تعلق آلات WebVR کے ذریعے API کے پتہ روکنے"
    },
    "blackbind": {
       "description": "+ Blacklist",

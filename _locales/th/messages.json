@@ -52,8 +52,8 @@
       "message": "มักจะเอาเครื่องมือทางสังคม / ปุ่มแม้ว่าอนุญาตพิเศษ"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "สำหรับการปิดกั้นที่ครอบคลุมมากขึ้นให้ตรวจสอบ <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery </a, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>ตัด</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>เบลอ</a>, และ / หรือ <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock กำเนิด</a> ที่มีทั้งหมดของรายการการสมัครสมาชิกได้ที<a href=https://www.fanboy.co.nz/ target=_blank>เว็บไซต์ Fanboy</a>"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "สำหรับการปิดกั้นที่ครอบคลุมมากขึ้นให้ตรวจสอบ <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>ตัด</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>เบลอ</a>, และ / หรือ <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock กำเนิด</a> ที่มีทั้งหมดของรายการการสมัครสมาชิกได้ที<a href=https://www.fanboy.co.nz/ target=_blank>เว็บไซต์ Fanboy</a>"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "บล็อกทั้งหมดได้รับอนุญาตสำหรับเซสชัน"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "บล็อก Bluetooth การแจงนับ:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "ป้องกันไม่ให้อุปกรณ์ที่มีการตรวจพบผ่าน Bluetooth API"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "เอาสิทธิ์ชั่วคราว"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "กำหนดค่าอง ScriptSafe:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "กำหนดค่าอง ScriptSafe"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "การตั้งค่านำเข้าสำเร็จ"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "การตั้งค่านำเข้าสำเร็จยกเว้นดังต่อไปนี้ (ค่าว่างหรือชื่อที่ไม่รู้จัก):"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "การตั้งค่านำเข้าสำเร็จและการซิงค์ใน 30 วินาที"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "การตั้งค่านำเข้าสำเร็จและการซิงค์ใน 10 วินาที"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "การตั้งค่าที่บันทึกไว้"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "การตั้งค่าการบันทึกและการซิงค์ใน 30 วินาที"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "การตั้งค่าการบันทึกและการซิงค์ใน 10 วินาที"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "ป้องกันการรั่วไหลที่อยู่ IP"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "บล็อก WebVR การแจงนับ:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "ป้องกันไม่ให้อุปกรณ์ที่มีการตรวจพบผ่าน WebVR API"
    },
    "blackbind": {
       "description": "+ Blacklist",

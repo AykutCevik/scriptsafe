@@ -52,8 +52,8 @@
       "message": "دائما إزالة الحاجيات / أزرار الاجتماعية، حتى إذا اللائحة البيضاء"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/ghostery/mlomiejdfkolichcflejclcbmpeaniij target=_blank>Ghostery</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
-      "message": "لحجب أكثر شمولا، تحقق من Ghostery، افصل، والضبابية، و / أو uBlock المنشأ مع كل من قوائم الاشتراك على موقع بوي"
+      "description": "For more comprehensive blocking, check out <a href=https://chrome.google.com/webstore/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp target=_blank>Privacy Badger</a>, <a href=https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo target=_blank>Disconnect</a>, <a href=https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd target=_blank>Blur</a>, and/or <a href=https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm target=_blank>uBlock Origin</a> with all of the subscription lists on the <a href=https://www.fanboy.co.nz/ target=_blank>Fanboy site</a>",
+      "message": "لحجب أكثر شمولا، تحقق من Privacy Badger، افصل، والضبابية، و / أو uBlock المنشأ مع كل من قوائم الاشتراك على موقع بوي"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "منع جميع المسموح بها للجلسة"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "كتلة Bluetooth التعداد:"
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "منع وجود أجهزة الكشف عن طريق Bluetooth API"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -348,8 +356,8 @@
       "message": "إزالة كافة الأذونات مؤقتة"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "تكوين مفاتيح الاختصار ScriptSafe:"
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "تكوين مفاتيح الاختصار ScriptSafe"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "إعدادات المستوردة بنجاح"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "إعدادات المستوردة بنجاح، باستثناء ما يلي (قيمة فارغة أو اسم غير المعترف بها):"
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "إعدادات المستوردة بنجاح والمزامنة في 30 ثانية"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "إعدادات المستوردة بنجاح والمزامنة في 10 ثانية"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (<strong>for advanced users</strong>):",
@@ -572,8 +580,12 @@
       "message": "تم حفظ الاعدادات"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "الإعدادات المحفوظة والمزامنة في 30 ثانية"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "الإعدادات المحفوظة والمزامنة في 10 ثانية"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "Show in Context Menu:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "منع تسرب عنوان IP"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "كتلة WebVR التعداد:"
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "منع وجود أجهزة الكشف عن طريق WebVR API"
    },
    "blackbind": {
       "description": "+ Blacklist",

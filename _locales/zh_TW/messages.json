@@ -52,8 +52,8 @@
       "message": "永遠移除社交小工具或按鈕，即使已經列入允許名單"
    },
    "antisocialdesc2": {
-      "description": "For more comprehensive blocking, check out Ghostery, Disconnect, Blur, and/or uBlock Origin with all of the subscription lists on the Fanboy site",
-      "message": "如要更全面地封鎖，請尋找Ghostery, Disconnect, Blur, and/or uBlock Origin （所有在 Fanboy 網站的訂閱名單）"
+      "description": "For more comprehensive blocking, check out Privacy Badger, Disconnect, Blur, and/or uBlock Origin with all of the subscription lists on the Fanboy site",
+      "message": "如要更全面地封鎖，請尋找Privacy Badger, Disconnect, Blur, and/or uBlock Origin （所有在 Fanboy 網站的訂閱名單）"
    },
    "audioblock": {
       "description": "Block Audio Fingerprinting:",
@@ -90,6 +90,14 @@
    "blockallallowed": {
       "description": "Block All Allowed For Session",
       "message": "封鎖所有於此段允許的項目"
+   },
+   "bluetooth": {
+      "description": "Block Bluetooth Enumeration:",
+      "message": "封鎖Bluetooth手柄計算："
+   },
+   "bluetoothdesc": {
+      "description": "prevent having devices detected via the Bluetooth API",
+      "message": "防止通過Bluetooth API檢測到裝置"
    },
    "bulkimport": {
       "description": "bulk import",
@@ -128,16 +136,16 @@
       "message": "完全阻擋讀出"
    },
    "canvasdesc": {
-      "description": "protect against fingerprinting attempts through <canvas> elements",
-      "message": "防止嘗試於<canvas>元素套取指紋"
+      "description": "protect against fingerprinting attempts through &lt;canvas&gt; elements",
+      "message": "防止嘗試於&lt;canvas&gt;元素套取指紋"
    },
    "canvasfont": {
       "description": "Block Canvas Font Access:",
       "message": "阻擋存取Canvas 字體："
    },
    "canvasfontdesc": {
-      "description": "prevent system fonts from being enumerated through <canvas> elements. May interfere with Google Docs.",
-      "message": "防止系統字體從<canvas>元素被列舉。可能干擾Google Document。"
+      "description": "prevent system fonts from being enumerated through &lt;canvas&gt; elements. May interfere with Google Docs.",
+      "message": "防止系統字體從&lt;canvas&gt;元素被列舉。可能干擾Google Document。"
    },
    "classicoptions": {
       "description": "Classic Options Mode:",
@@ -348,8 +356,8 @@
       "message": "移除所有臨時權限"
    },
    "hotkeyspage": {
-      "description": "Configure ScriptSafe hotkeys:",
-      "message": "設置ScriptSafe熱鍵："
+      "description": "Configure ScriptSafe hotkeys",
+      "message": "設置ScriptSafe熱鍵"
    },
    "hotkeysinst": {
       "description": "click on Keyboard Shortcuts",
@@ -400,12 +408,12 @@
       "message": "設定成功匯入"
    },
    "importsuccesscond": {
-      "description": "Settings imported successfully, except the following (empty value or unrecognized name): ",
+      "description": "Settings imported successfully, except the following (empty value or unrecognized name):",
       "message": "設定成功匯入，除了以下（空值或無法識別的名稱）："
    },
    "importsuccesssync": {
-      "description": "Settings imported successfully and syncing in 30 seconds",
-      "message": "成功匯入並在30秒內同步設定"
+      "description": "Settings imported successfully and syncing in 10 seconds",
+      "message": "成功匯入並在10秒內同步設定"
    },
    "keyboard": {
       "description": "Reduce Keyboard Fingerprinting (for advanced users):",
@@ -572,8 +580,12 @@
       "message": "儲存設定"
    },
    "settingssavesync": {
-      "description": "Settings saved and syncing in 30 seconds",
-      "message": "設定已儲存並會在30秒內同步"
+      "description": "Settings saved and syncing in 10 seconds",
+      "message": "設定已儲存並會在10秒內同步"
+   },
+   "showcontext": {
+      "description": "Show in Context Menu:",
+      "message": "顯示在快顯功能表:"
    },
    "ssdisabled": {
       "description": "ScriptSafe is disabled",
@@ -734,6 +746,14 @@
    "webrtcdesc": {
       "description": "prevent IP address leakage",
       "message": "防止IP地址洩漏"
+   },
+   "webvr": {
+      "description": "Block WebVR Enumeration:",
+      "message": "封鎖WebVR手柄計算："
+   },
+   "webvrdesc": {
+      "description": "prevent having devices detected via the WebVR API",
+      "message": "防止通過WebVR API檢測到裝置"
    },
    "blackbind": {
       "description": "+ Blacklist",
